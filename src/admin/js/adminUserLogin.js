@@ -1,28 +1,29 @@
 $(document).ready(function() {
 
 
-    $("#js-adminUserRegisterSubmit").click(function() {
-        var name = $(".name").val(),
-            mail = $(".mail").val(),
+    $("#js-adminUserLoginSubmit").click(function() {
+        var mail = $(".mail").val(),
             password = $(".password").val();
 
-        $("#js-adminUserRegisterSubmit").attr("id","");
+        $("#js-adminUserLoginSubmit").attr("id","");
 
         $.ajax({
             type: "POST",
-            url: "/src/admin/api/adminUserRegister.php",
+            url: "/src/admin/api/adminUserLogin.php",
             data: {
-                name : name,
                 mail : mail,
                 password : password
             },
             dataType: "json",
         })
         .done(function(dataSet) {
-            if( dataSet.success === 0 ) {
-                window.location.href = "/src/admin/registerComplete.php";
+            // success:0 ログイン成功　1ログイン失敗
+            if( dataSet["success"] === 0 ) {
+                window.sessionStorage.setItem(["logined"],['1']);
+
             } else {
-                alert("登録失敗");
+                console.log("ログインできなかっった");
+
             }
 
         })

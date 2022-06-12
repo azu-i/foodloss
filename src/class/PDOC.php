@@ -28,23 +28,20 @@ class PDOC {
 
     public function uplodeSql($sql){
         $st=$this->dbh;
-        $stmt=$st->query($sql);
-        $selectItems=$stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $selectItems;
+        $stmt=$st->prepare($sql);
+        $stmt->execute();
     }
 
     public function insertSql($sql){
         $st=$this->dbh;
-        $stmt=$st->query($sql);
-        $selectItems=$stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $selectItems;
+        $stmt=$st->prepare($sql);
+        $stmt->execute();
     }
 
     public function deleteSql($sql){
         $st=$this->dbh;
-        $stmt=$st->query($sql);
-        $selectItems=$stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $selectItems;
+        $stmt=$st->prepare($sql);
+        $stmt->execute();
     }
 
 }
