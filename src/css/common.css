@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 100%;
+    list-style: none;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-all;
+}
+
+
+header {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #d8d8d8;
+    box-shadow: 0px 0px 3px 0 rgb(0 0 0 / 15%);
+}
+
+header figure {
+    position: absolute;
+    height: 60px;
+    top: 0;
+    bottom: 0;
+    left: 25px;
+    margin: auto;
+}
+
+
+header .headerLogoutButtonOuter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    height: 24px;
+    margin: auto;
+}
+
+header .headerLogoutButton{
+    background-color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: 0px 0px 3px 0 rgb(0 0 0 / 15%);
+}
+
+.logout {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 200;
+    margin: 0;
+}
+
+header .headerLogoutButton:hover {
+    background-color: #eda68b;
+    color: #fff;
+
+}
+
+.wrapperContents {
+    display: flex;
+    min-height: 100vh;
+}
+
+.globalNavi {
+    background: hsl(200, 20%, 97%);
+    box-shadow: 0px 0px 2px 0 rgb(0 0 0 / 28%);
+    flex: 1 0 240px;
+    padding: 8px;
+}
+
+.userProfile {
+    position: relative;
+    margin: 10px 0 30px;
+    z-index: 100;
+}
+
+.userProfile::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    border-radius: 8px;
+    background: #eda68b;
+}
+
+.userName {
+    min-height: 32px;
+    padding: 10px 25px;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.userName span {
+    font-weight: bold;
+}
+
+.naviItem a {
+    display: block;
+    position: relative;
+    width: 224px;
+    height: 32px;
+    padding-left: 40px;
+    border-radius: 2px;
+    color: #2C2834;
+    text-decoration: none;
+    line-height: 32px;
+}
+
+.naviList .toppage,
+.naviList .otherSetting li:first-child{
+    margin: 0 0 10px;
+}
+
+.naviList .prodoctsSetting span {
+    margin: 0 0 15px 15px;
+    font-weight: bold;
+}
+
+.naviList .naviSublist {
+    margin: 10px 0 0;
+}
+
+.naviList .naviSublist .naviItem {
+    margin: 0 0 10px;
+}
+
+.naviList .otherSetting {
+    margin: 0 0 25px;
+}
+
+.toppageBackLink,
+.userEditLink,
+.orderedLink,
+.productsLink,
+.passwordEditLink {
+    position: relative;
+}
+
+.toppageBackLink:before {
+    content: "";
+    background-image: url(/src/img/home.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    left: 16px;
+    position: absolute;
+}
+
+.userEditLink:before {
+    content: "";
+    background-image: url(/src/img/user.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    left: 16px;
+    position: absolute;
+}
+
+.orderedLink:before {
+    content: "";
+    background-image: url(/src/img/cart.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    left: 16px;
+    position: absolute;
+}
+
+
+.productsLink:before {
+    content: "";
+    background-image: url(/src/img/vegetable.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    left: 16px;
+    position: absolute;
+}
+
+.passwordEditLink:before {
+    content: "";
+    background-image: url(/src/img/password.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    left: 16px;
+    position: absolute;
+}
+
+.naviItem:hover {
+    background-color: rgb(237 166 139 / .5);
+    font-weight: bold;
+}
+
+.naviItem.active {
+    background-color: rgb(237 166 139 / .5);
+    font-weight: bold;
+}
+
+main {
+    flex: 0 1 100%;
+    padding: 24px 40px 120px;
+}
+
+.changeculumnCheckOuter input[type="checkbox"] {
+    display: none;
+}
+
+.changeculumnCheckOuter .label {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #646464;
+    border: 1px solid #646464;
+    border-radius: 20px;
+}
+
+.changeculumnCheckOuter .label:hover {
+    opacity: .5;
+}
+
+.changeculumnCheckOuter input[type="checkbox"]:checked + label {
+    background: #eda68b;
+    color: #fff;
+    border-color: #eda68b;
+}
+
+.changeculumnCheckboxOuter {
+    font-size: 12px;
+}
+
+.changeRegisterSummary {
+    margin: 0 0 35px;
+}
+
+.changeRegisterSummary h2 {
+    margin: 0 0 15px;
+    font-size: 32px;
+    line-height: 40px;
+    color: #002a5a;
+}
+
+.changeRegisterSummary p {
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+}
+
+.currentUser {
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: 0 0 25px;
+}
+
+.currentUser h2 {
+    margin: 0 0 15px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #444;
+}
+
+.currentUserBox {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+.currentUserBox th {
+    padding: 16px;
+    background-color: rgb(237 166 139 / .5);
+    position: relative;
+    text-align: left;
+    line-height: 32px;
+}
+
+@media (min-width: 801px) {
+    .hidePc {
+        display: none;
+    }
+
+}
+
+@media (max-width: 801px) {
+    .hideMobile {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        z-index: 1001;
+        background-color: rgb(248 211 198 / .5);
+
+    }
+
+    /* チェックボックスを非表示にする */
+    .drawerHidden {
+        display: none;
+    }
+
+    /* ハンバーガーアイコンの設置スペース */
+    .drawerOpen {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;/* 重なり順を一番上にする */
+        cursor: pointer;
+        position: absolute;
+        top: 4px;
+        right: 12px;
+    }
+
+    /* ハンバーガーメニューのアイコン */
+    .drawerOpen span,
+    .drawerOpen span:before,
+    .drawerOpen span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #969191;
+        transition: 0.5s;
+        position: absolute;
+    }
+
+    /* 三本線の一番上の棒の位置調整 */
+    .drawerOpen span:before {
+        bottom: 8px;
+    }
+
+    /* 三本線の一番下の棒の位置調整 */
+    .drawerOpen span:after {
+        top: 8px;
+    }
+
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawerInput:checked ~ .drawerOpen span {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawerInput:checked ~ .drawerOpen span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #drawerInput:checked ~ .drawerOpen span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .globalNavi {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 66px;
+        left: 100%; /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #fff;
+        transition: .5s;
+    }
+
+    .globalNavi.isOpen {
+        left: 0;
+    }
+
+    .globalNavi {
+        background: hsl(200, 20%, 97%);
+    }
+
+    .logout {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: #fff;
+        top: 13px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .logout:hover {
+        background-color: #eda68b;
+        border: none;
+        color: #fff;
+    }
+
+
+
+}
