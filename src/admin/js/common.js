@@ -1,4 +1,5 @@
 $(document).ready(() => {
+
     $('.drawerOpen').on('click', function() {
         $(".globalNavi").toggleClass("isOpen");
     });

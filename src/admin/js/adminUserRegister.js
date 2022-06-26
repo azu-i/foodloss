@@ -1,33 +1,28 @@
 $(document).ready(function() {
 
 
-    $("#js-adminUserLoginSubmit").click(function() {
-        var mail = $(".mail").val(),
+    $("#js-adminUserRegisterSubmit").click(function() {
+        var name = $(".name").val(),
+            mail = $(".mail").val(),
             password = $(".password").val();
 
-        $("#js-adminUserLoginSubmit").attr("id","");
+        $("#js-adminUserRegisterSubmit").attr("id","");
 
         $.ajax({
             type: "POST",
-            url: "/src/admin/api/adminUserLogin.php",
+            url: "/src/admin/api/adminUserRegister.php",
             data: {
+                name : name,
                 mail : mail,
                 password : password
             },
             dataType: "json",
         })
         .done(function(dataSet) {
-            // success:0 ログイン成功　1ログイン失敗
-
-            console.log(dataSet["success"]);
-            if( dataSet["success"] === 0 ) {
-                console.log("seikou");
-                window.location.href = "/src/admin/home.php";
-
+            if( dataSet.success === 0 ) {
+                window.location.href = "/src/admin/registerComplete.php";
             } else {
-                console.log("sippai");
-
-
+                alert("登録失敗");
             }
 
         })
