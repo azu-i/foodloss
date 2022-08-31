@@ -13,7 +13,7 @@ require_once __DIR__."/parts/header.php";
             <div class="noticeOuter">
                 <div class="noticeTitile">
                     <span class="userName"></span>
-                    <span>様へのお知らせ</span>
+                    <span><?= $var["name"] ?>様へのお知らせ</span>
                 </div>
                 <div class="noticeMain">
                     

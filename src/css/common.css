@@ -62,7 +62,85 @@ header .headerLogoutButton{
 header .headerLogoutButton:hover {
     background-color: #eda68b;
     color: #fff;
+}
 
+.errorMessage {
+    font-size: 10px;
+    color: #de4040;
+}
+
+.loginRegisterBody {
+    background-color: #f4f4f4;
+}
+
+.loginRegisterOuter {
+    width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 180px 40px 60px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: relative;
+}
+
+.loginRegisterOuter:before {
+    content: "";
+    width: 250px;
+    height: 105px;
+    position: absolute;
+    top: 40px;
+    right: calc(50% - 125px);
+    background-image: url(/src/img/headerIcon.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+}
+
+.loginRegisterOuter span,
+.loginRegisterOuter input {
+    display: block;
+}
+
+.loginRegisterOuter span {
+    margin: 0 0 5px;
+}
+
+.loginRegisterOuter input {
+    margin: 0 0 15px;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
+
+.loginRegisterOuter input.email,
+.loginRegisterOuter input.password,
+.loginRegisterOuter input.name,
+.loginRegisterOuter input.mail {
+    padding: 2px 4px;
+    font-size: 14px;
+}
+
+.loginRegisterOuter input.email,
+.loginRegisterOuter input.mail {
+    margin: 0 0 10px;
+}
+
+.loginRegisterOuter input.adminUserLoginSubmit,
+.loginRegisterOuter input.adminUserRegisterSubmit {
+    margin: 0 0 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eda68b;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.loginRegisterOuter input.adminUserLoginSubmit:hover,
+.loginRegisterOuter input.adminUserRegisterSubmit:hover {
+    opacity: .8;
 }
 
 .wrapperContents {
@@ -92,7 +170,7 @@ header .headerLogoutButton:hover {
     background: #eda68b;
 }
 
-.userName {
+.globalNavi .userName {
     min-height: 32px;
     padding: 10px 25px;
     font-size: 20px;
@@ -267,32 +345,153 @@ main {
     line-height: 1.3;
 }
 
-.currentUser {
+.userEditOuter section,
+.changeculumnCheckOuter,
+ {
+    width: 600px;
+}
+.currentUser,
+.passwordEditInputOuter,
+.changeculumnCheckOuter {
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     margin: 0 0 25px;
 }
 
-.currentUser h2 {
+.currentUser h2,
+.passwordEditInputOuter h2 {
     margin: 0 0 15px;
     font-weight: bold;
     font-size: 22px;
     color: #444;
 }
 
-.currentUserBox {
+.passwordEditInputOuter {
+    width: 600px;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+.currentUserBox,
+.changeculumnTextTableOuter {
     width: 100%;
     border-collapse: separate;
     border-spacing: 1px;
 }
 
-.currentUserBox th {
-    padding: 16px;
+.changeculumnTextTableOuter {
+    margin: 0 0 15px;
+}
+
+.currentUserBox th,
+.changeculumnTextTableOuter th {
+    width: 30%;
+    padding: 10px;
     background-color: rgb(237 166 139 / .5);
     position: relative;
     text-align: left;
     line-height: 32px;
+    font-size: 14px;
+}
+
+.currentUserBox td,
+.changeculumnTextTableOuter td {
+    width: 70%;
+    padding: 10px;
+}
+
+.changeculumnTextTableOuter td {
+    padding: 14px;
+}
+.passwordEditInputOuter td {
+    padding: 15px;
+    width: 62%;
+}
+
+.passwordEditInputOuter td input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.passwordEditInputOuter table {
+    margin: 0 0 20px;
+}
+
+.nextButtonOuter {
+    text-align: center;
+}
+
+.nextButton {
+    padding: 10px 80px;
+    background-color: #eda68b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nextButton:hover {
+    opacity: .8;
+}
+
+.nextButton.userEdit {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.nextButton.disabled {
+    background-color: #ccc;
+}
+
+.passwordEditInputOuter th {
+    padding: 14px;
+    background-color: rgb(237 166 139 / .5);
+    position: relative;
+    text-align: left;
+    line-height: 32px;
+}
+
+.changeculumnTextOuter {
+    display: none;
+    margin: 15px 0 0;
+}
+
+.changeculumnTextOuter.active {
+    display: block;
+}
+
+.changeculumnCheckOuter h2 {
+    font-size: 18px;
+    margin: 0 5px 10px;
+}
+
+.changeculumnText {
+    display: none;
+}
+
+.changeculumnText .zip {
+    margin: 0 0 10px;
+}
+
+.changeculumnText input[type="text"],
+.changeculumnText textarea {
+    width: 80%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.changeculumnText textarea {
+
+}
+
+.changeculumnText.active {
+    display: flex;
+    border-bottom: 1px solid #fff;
 }
 
 @media (min-width: 801px) {

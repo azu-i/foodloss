@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__."/../class/adminUser.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,7 @@
     <link rel="stylesheet" href="/src/css/common.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/src/admin/js/common.js"></script>
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js"></script>
     <?=$jsScript?>
 
     <title><?=$title?></title>
@@ -34,7 +39,7 @@
 
             <div class="userProfile">
                 <p class="userName">
-                    <span class="name">伊藤梓</span>
+                    <span class="name"><?= $var["name"] ?></span>
                     <span class="honorificTitle">様</span>
                     <button type="button" name="button" class="logout hidePc">ログアウト</button>
                 </p>
@@ -50,21 +55,20 @@
                 <li class="otherSetting">
                     <ul class="naviSublist">
                         <li class="naviItem"><a href="/src/admin/userEdit.php" class="userEditLink">登録情報の変更</a></li>
-                        <li class="naviItem"><a href="/src/admin/userEdit.php" class="passwordEditLink">パスワード変更</a></li>
+                        <li class="naviItem"><a href="/src/admin/passwordEdit.php" class="passwordEditLink">パスワード変更</a></li>
                         <li class="naviItem"><a href="" class="orderedLink">受注履歴</a></li>
                     </ul>
                 </li>
                 <li class="prodoctsSetting">
                     <span>商品の登録・編集</span>
                     <ul class="naviSublist">
-                        <li class="naviItem"><a href="" class="productsLink">商品一覧</a></li>
-                        <li class="naviItem"><a href="" class="productsLink">商品登録</a></li>
+                        <li class="naviItem"><a href="/src/admin/productsList.php" class="productsLink">商品一覧</a></li>
+                        <li class="naviItem"><a href="/src/admin/productsRegist.php" class="productsLink">商品登録</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <main>
-
 
 <body>
 

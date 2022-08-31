@@ -10,8 +10,6 @@ $pdoc = new PDOC();
 
 $results = $pdoc->selectSql("SELECT * FROM `admin-user`");
 
-var_dump($results);
-
 
 
 ?>

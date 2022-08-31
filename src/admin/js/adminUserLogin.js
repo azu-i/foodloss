@@ -2,8 +2,10 @@ $(document).ready(function() {
 
 
     $("#js-adminUserLoginSubmit").click(function() {
-        var mail = $(".mail").val(),
+        var mail = $(".email").val(),
             password = $(".password").val();
+
+            console.log(mail);
 
         $("#js-adminUserLoginSubmit").attr("id","");
 
@@ -19,14 +21,12 @@ $(document).ready(function() {
         .done(function(dataSet) {
             // success:0 ログイン成功　1ログイン失敗
 
-            console.log(dataSet["success"]);
+            console.log(dataSet);
             if( dataSet["success"] === 0 ) {
-                console.log("seikou");
                 window.location.href = "/src/admin/home.php";
 
             } else {
-                console.log("sippai");
-
+                alert("ログイン情報が間違えています。")
 
             }
 
